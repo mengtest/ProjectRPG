@@ -1,3 +1,5 @@
-Character
-Grass floor
-Wall
+1.Grass floor
+3.Dirt floor
+2.Dirt wall (like in stardew valley)
+4.Stone wall
+5.Stone floor
