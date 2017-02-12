@@ -58,7 +58,7 @@ public class CharController : MonoBehaviour
 		}
 
 
-		Vector3 direction = new Vector3 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 		Vector3 movement = Vector3.Normalize(direction) * moveSpeed;
 
 		controller.Move (movement);
