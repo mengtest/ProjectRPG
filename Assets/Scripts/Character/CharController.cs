@@ -12,7 +12,7 @@ public class CharController : MonoBehaviour
 
 	private float health;
 	public float startingHealth = 100;
-	public float maxHealth;
+	private float maxHealth;
 	public GameObject healthCounter;
 	public GameObject healthCounterBackground;
 
@@ -30,10 +30,24 @@ public class CharController : MonoBehaviour
 		}
 	}
 
+	public float MaxHealth
+	{
+		get
+		{
+			return maxHealth;
+		}
+
+		set
+		{
+			maxHealth = value;
+			UpdateHealth ();
+		}
+	}
+
 
 	public float stamina;
 	public float startingStamina = 100;
-	public float maxStamina;
+	private float maxStamina;
 	public float staminaGenerationPerSecond = 1;
 	public GameObject staminaCounter;
 	public GameObject staminaCounterBackground;
@@ -47,11 +61,24 @@ public class CharController : MonoBehaviour
 
 		set
 		{
-			stamina = Mathf.Clamp( value, 0, maxStamina);
+			stamina = Mathf.Clamp (value, 0, maxStamina);
 			UpdateStamina ();
 		}
 	}
 
+	public float MaxStamina
+	{
+		get
+		{
+			return maxStamina;
+		}
+
+		set
+		{
+			maxStamina = value;
+			UpdateStamina ();
+		}
+	}
 
 	public float walkspeed = 0.07f;
 	public float runspeed = 0.12f;
